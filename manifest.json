@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "网页答题助手",
+  "version": "4.0.0",
+  "description": "读取网页选择题，调用大模型给出答案并自动勾选。支持整页滚动、iframe、导出题目给豆包、按外部答案自动选。",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_popup": "popup.html", "default_title": "网页答题助手" },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle",
+      "all_frames": true,
+      "match_about_blank": true
+    }
+  ]
+}

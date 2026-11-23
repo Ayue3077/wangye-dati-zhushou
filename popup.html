@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { width: 330px; margin: 0; font: 13px/1.6 -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif; color: #1f2328; }
+    .hd { background: #0f7b6c; color: #fff; padding: 10px 12px; font-weight: 600; }
+    .bd { padding: 12px; }
+    .row { display: flex; gap: 6px; margin-bottom: 8px; }
+    button { flex: 1; padding: 7px 8px; border: 1px solid #d0d7de; background: #f6f8fa; border-radius: 6px; cursor: pointer; font-size: 12px; font-family: inherit; }
+    button.primary { background: #0f7b6c; border-color: #0f7b6c; color: #fff; }
+    button:hover { filter: brightness(0.96); }
+    .status { min-height: 60px; max-height: 300px; overflow-y: auto; background: #f6f8fa; border: 1px solid #e1e4e8; border-radius: 6px; padding: 7px 8px; font-size: 11.5px; white-space: pre-wrap; word-break: break-all; line-height: 1.5; }
+    #ansInput { width: 100%; box-sizing: border-box; height: 62px; resize: vertical; font: 12px/1.5 Consolas, "Courier New", monospace; padding: 6px 7px; border: 1px solid #d0d7de; border-radius: 6px; color: #1f2328; }
+    #ansInput:focus { outline: 2px solid #0f7b6c; outline-offset: -1px; }
+    .hint { color: #57606a; font-size: 11px; margin: 4px 0 8px; }
+    .tip { color: #57606a; font-size: 11px; margin-top: 8px; }
+  </style>
+</head>
+<body>
+  <div class="hd">网页答题助手</div>
+  <div class="bd">
+    <textarea id="ansInput" placeholder="粘贴答案：1A 2B 3B 4B ...&#10;也支持 1.A 2.B / 第1题 A / 1-A / 多选题 7ABC"></textarea>
+    <div class="hint">粘贴后点下面按钮，直接按答案在页面上勾选</div>
+    <div class="row">
+      <button class="primary" id="apply">按答案自动选</button>
+      <button id="dump">导出题目给豆包</button>
+    </div>
+    <div class="row">
+      <button id="listOnly">只列答案</button>
+      <button id="start">开始答题</button>
+    </div>
+    <div class="row">
+      <button id="copy">复制答案</button>
+      <button id="scan">扫一遍</button>
+    </div>
+    <div class="row">
+      <button id="raw">导出原始文本</button>
+      <button id="probe">结构探针</button>
+    </div>
+    <div class="row">
+      <button id="diag">诊断</button>
+      <button id="test">测试模型</button>
+    </div>
+    <div class="row">
+      <button id="opts">模型设置</button>
+    </div>
+    <div class="status" id="status">主用流程：点「导出题目给豆包」→ 粘给豆包 → 把豆包的答案粘到上面输入框 → 点「按答案自动选」。</div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

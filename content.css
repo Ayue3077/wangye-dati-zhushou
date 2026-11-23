@@ -1,0 +1,123 @@
+/* 纯展示面板：标题栏（可拖动 + 关闭）+ 内容区 */
+#aqa-panel {
+  position: fixed !important;
+  right: 16px;
+  bottom: 16px;
+  left: auto;
+  top: auto;
+  width: 400px !important;
+  max-width: calc(100vw - 32px) !important;
+  height: auto !important;
+  max-height: 82vh !important;
+  z-index: 2147483647 !important;
+  background: #ffffff !important;
+  border: 1px solid #c9d1d9 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, .24) !important;
+  font: 13px/1.6 -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif !important;
+  color: #1f2328 !important;
+  display: none;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+/* 标题栏 */
+#aqa-panel .aqa-head {
+  flex: 0 0 auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 9px 10px 9px 12px !important;
+  background: #0f7b6c !important;
+  color: #fff !important;
+  cursor: move !important;
+  user-select: none !important;
+}
+
+#aqa-panel .aqa-title {
+  font-weight: 600 !important;
+  color: #fff !important;
+  font-size: 13.5px !important;
+  white-space: nowrap !important;
+}
+
+#aqa-panel .aqa-btns {
+  display: flex !important;
+  gap: 5px !important;
+}
+
+#aqa-panel .aqa-btn {
+  all: unset !important;
+  cursor: pointer !important;
+  padding: 1px 8px !important;
+  border-radius: 4px !important;
+  background: rgba(255, 255, 255, .24) !important;
+  color: #fff !important;
+  font-size: 15px !important;
+  line-height: 1.3 !important;
+}
+
+#aqa-panel .aqa-btn:hover {
+  background: rgba(255, 255, 255, .45) !important;
+}
+
+/* 内容区：按钮去掉后把空间全给这里 */
+#aqa-panel .aqa-body {
+  flex: 1 1 auto !important;
+  min-height: 150px !important;
+  max-height: 64vh !important;
+  margin: 10px 10px 0 !important;
+  padding: 9px 10px !important;
+  overflow-y: auto !important;
+  background: #f6f8fa !important;
+  border: 1px solid #e1e4e8 !important;
+  border-radius: 6px !important;
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+  font-size: 12px !important;
+  line-height: 1.6 !important;
+  user-select: text !important;
+}
+
+#aqa-panel .aqa-body div {
+  padding: 1px 0 !important;
+}
+
+#aqa-panel .aqa-warn {
+  color: #b42318 !important;
+  font-weight: 600 !important;
+}
+
+/* 底部提示 */
+#aqa-panel .aqa-tip {
+  flex: 0 0 auto !important;
+  padding: 7px 11px 9px !important;
+  color: #57606a !important;
+  font-size: 11px !important;
+  line-height: 1.5 !important;
+}
+
+/* 关闭后的悬浮小球 */
+#aqa-fab {
+  position: fixed !important;
+  right: 14px !important;
+  bottom: 14px !important;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50% !important;
+  background: #0f7b6c !important;
+  color: #fff !important;
+  z-index: 2147483646 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font: 600 16px/1 -apple-system, "Segoe UI", sans-serif !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .3) !important;
+  user-select: none !important;
+}
+
+#aqa-fab:hover {
+  background: #0d6b5e !important;
+}

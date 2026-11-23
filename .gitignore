@@ -1,0 +1,17 @@
+# 打包签名产物，不要提交
+*.pem
+*.crx
+*.publish
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# 依赖与临时
+node_modules/
+*.log
+_test_*.js
+_test_*.txt
